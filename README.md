@@ -1,4 +1,4 @@
-# simple-rate-limiter
+# Rate Limiter Node JS
 
 A simple way to limit how often a function is executed.
 
@@ -104,11 +104,6 @@ var strange = limit(function() {
 }).to(1).per(1000).to(2).per(2000);
 for(var i = 0; i < 3; i++) { strange(); }
 
-/*** Console output: ***/
-// $ Every once in a while
-// $ Every once in a while
-// ... pause for 2 second ...
-// $ Every once in a while
 ```
 
 ## Getting simple-rate-limiter
@@ -119,11 +114,11 @@ The easiest way to get simple-rate-limiter is with [npm](http://npmjs.org/):
 
 Alternatively you can clone this git repository:
 
-    git clone git://github.com/xavi-/node-simple-rate-limiter.git
+    git clone https://github.com/omair445/request-limiter-node-js.git
 
 
 ## Developed by
-* Xavi Ramirez
+* Omair Afzal  --> Otif Solution
 
 ## License
 This project is released under [The MIT License](http://www.opensource.org/licenses/mit-license.php).
