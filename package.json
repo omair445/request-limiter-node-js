@@ -8,15 +8,20 @@
     "queue calls"
   ],
   "maintainers": [
-    {
-      "name": "Omair Afzal",
-      "email": "omair.mairy@gmail.com",
-      "web": "otif-solutions.com"
-    }
+    "Omair Afzal <omair.mairy@gmail.com> (otif-solutions.com)"
   ],
   "main": "./index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/omair445/request-limiter-node-js"
-  }
+    "url": "git+https://github.com/omair445/request-limiter-node-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/omair445/request-limiter-node-js/issues"
+  },
+  "homepage": "https://github.com/omair445/request-limiter-node-js#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Omair Afzal",
+  "license": "ISC"
 }

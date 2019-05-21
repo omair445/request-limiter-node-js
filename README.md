@@ -9,11 +9,11 @@ Currently works with node.js v0.10.1+ (and probably lower).
 If you want to limit _all_ requests:
 
 ```javascript
-var limit = require("simple-rate-limiter");
+var limit = require("rate-limiter-node");
 var request = limit(require("request")).to(10).per(1000);
 
 userIds.forEach(function(userId) {
-	var url = "http://easily-overwhelmed-api.com/users/" + userId;
+	var url = "http://anywebsite/users/" + userId;
 	request(url, function(err, res, body) {
 		/* ... Yay! Not a too-many-request-per-second error! ... */
 	});
@@ -23,7 +23,7 @@ userIds.forEach(function(userId) {
 Or if you'd like to be a bit more fine grain and/or explicit:
 
 ```javascript
-var limit = require("simple-rate-limiter");
+var limit = require("rate-limiter-node");
 var callApi = limit(function(userId, callback) {
 	var url = "http://easily-overwhelmed-api.com/users/" + userId;
 	request(url, callback);
@@ -43,7 +43,7 @@ Basic usage: `var limited = limit(fn);`
 - `limited(args...)`: Enqueues a set of arguments that `fn` will be executed with.  Returns an [EventEmitter](http://nodejs.org/docs/latest/api/events.html#events_class_events_eventemitter) that will emit a `limiter-exec` event when `fn` is executed with `args`.  Also, in the case that `fn` returns an EventEmitter, the events emmitted by the returned EventEmitter will be relayed to the EventEmitter returned by `limited`.  In other words, stuff like this works:
 
 	```javascript
-	var limit = require("simple-rate-limiter");
+	var limit = require("rate-limiter-node");
 	var request = require("request");
 	limit(request)("http://google.com").on("data", function(chunk) { /*** code ***/ });
 	```
@@ -106,7 +106,7 @@ for(var i = 0; i < 3; i++) { strange(); }
 
 ```
 
-## Getting simple-rate-limiter
+## Getting rate-limiter-node
 
 The easiest way to get simple-rate-limiter is with [npm](http://npmjs.org/):
 
