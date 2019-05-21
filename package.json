@@ -1,0 +1,22 @@
+{
+  "name": "rate-limiter-node",
+  "version": "1.0.0",
+  "description": "A simple way to rate limit how often a function is executed.",
+  "keywords": [
+    "throttle",
+    "rate limit",
+    "queue calls"
+  ],
+  "maintainers": [
+    {
+      "name": "Omair Afzal",
+      "email": "omair.mairy@gmail.com",
+      "web": "otif-solutions.com"
+    }
+  ],
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/omair445/request-limiter-node-js"
+  }
+}
